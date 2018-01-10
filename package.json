@@ -2,12 +2,11 @@
   "name": "lusc",
   "version": "0.1.0",
   "description": "site micro kernel",
-  "main": "build/index.js",
+  "main": "build/lusc.js",
+  "module": "src/index.js",
   "scripts": {
-    "build": "babel lib -d build",
-    "build:watch": "babel lib -w -d build",
-    "lint": "eslint lib/**; exit 0",
-    "lint:watch": "esw -w lib/**",
+    "build": "webpack",
+    "watch": "webpack --watch",
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,10 +21,10 @@
   },
   "homepage": "https://github.com/yaoius/lusc#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.3",
-    "babel-preset-react": "^6.24.1",
+    "@babel/core": "^7.0.0-beta.37",
+    "@babel/preset-env": "^7.0.0-beta.37",
+    "babel-loader": "^8.0.0-beta.0",
+    "css-loader": "^0.28.8",
     "eslint": "^4.13.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
@@ -33,11 +32,11 @@
     "eslint-watch": "^3.1.3",
     "polished": "^1.9.0",
     "prop-types": "^15.6.0",
+    "raw-loader": "^0.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "styled-components": "^2.3.0"
-  },
-  "dependencies": {
-    "babel-preset-env": "^1.6.1"
+    "style-loader": "^0.19.1",
+    "styled-components": "^2.3.0",
+    "webpack": "^3.10.0"
   }
 }
