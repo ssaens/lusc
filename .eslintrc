@@ -61,9 +61,9 @@
     ],
     'indent': [
       'warn',
-      2,
+      4,
       {
-        "SwitchCase": 1
+        "SwitchCase": 4
       }
     ],
     'guard-for-in': 'warn',
@@ -84,7 +84,6 @@
     'no-duplicate-case': 'warn',
     'no-empty-character-class': 'warn',
     'no-empty-pattern': 'warn',
-    'no-eval': 'warn',
     'no-ex-assign': 'warn',
     'no-extend-native': 'warn',
     'no-extra-bind': 'warn',
