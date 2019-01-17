@@ -1,0 +1,10 @@
+function main() {
+  $io.output.emit('*', '*', 'starting shell...');
+  $process.exec('/bin/lscsh.lsc').then(status => 
+    $io.output.emit('*', '*', `shell exited with status: ${status}`)
+  ).catch(err => 
+    $io.output.emit('*', '*', `shell errored with status: ${err.status}\n${err.message}`)
+  );
+}
+
+main();

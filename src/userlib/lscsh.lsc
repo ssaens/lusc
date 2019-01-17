@@ -1,0 +1,57 @@
+const { add } = $import('./test.lsc');
+
+const COMMAND_TABLE = {
+  help: [ cmd_help, 'help', 'show the help menu' ],
+  echo: [ cmd_echo, 'echo', 'echo input' ]
+};
+
+function cmd_help(argv) {
+  
+}
+
+function cmd_echo(argv) {
+  
+}
+
+function cmd_pwd(argv) {
+  
+}
+
+function cmd_cd(argv) {
+  
+}
+
+function cmd_touch(argv) {
+
+}
+
+function cmd_ls(argv) {
+
+}
+
+function execute(cmd) {
+  
+}
+
+function dispatch() {
+  
+}
+
+function resolve(argv) {
+  
+}
+
+function load_initializer() {
+
+}
+
+function main() {
+  $io.output.emit('*', 'info', 'running commands...');
+  $io.output.emit('*', 'info', 'lscsh v0.1.0');
+  $io.input.on('*', '*', console.log);
+  setTimeout(() => $io.output.emit('*', 'info', 'unreachable'), 2000);
+  add();
+  $io.output.emit('*', 'info', 'unreachable');
+}
+
+main();

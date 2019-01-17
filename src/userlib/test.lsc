@@ -1,0 +1,10 @@
+function add(a, b) {
+  $process.exit(2);
+  return a + b;
+}
+
+$process.env.NODE_ENV = 'none';
+
+$export({
+  add
+});
